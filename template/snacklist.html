@@ -1,0 +1,11 @@
+{%extends 'base.html' %}
+
+{% block content %}
+    <h2> List of Snacks </h2>
+    <ul>
+        {% for snack in object_list %}
+        <li><a href="{% url 'snackdetail' snack.pk %}">{{ snack.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+© 2021 GitHub, Inc.
